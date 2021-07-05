@@ -71,6 +71,11 @@ impl CoinCbcProblem {
     pub fn as_inner(&self) -> &Model {
         &self.model
     }
+
+    /// Get the inner coin_cbc model as a mutable reference
+    pub fn as_inner_mut(&mut self) -> &mut Model {
+        &mut self.model
+    }
 }
 
 impl SolverModel for CoinCbcProblem {

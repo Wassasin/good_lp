@@ -66,6 +66,11 @@ impl MiniLpProblem {
     pub fn as_inner(&self) -> &minilp::Problem {
         &self.problem
     }
+
+    /// Get the inner minilp model as a mutable reference
+    pub fn as_inner_mut(&mut self) -> &mut minilp::Problem {
+        &mut self.problem
+    }
 }
 
 impl SolverModel for MiniLpProblem {
